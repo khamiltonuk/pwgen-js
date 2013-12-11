@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The People's Password Generator</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="pwgen.css"
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>The People's Password Generator</h1>
+            <p>Random passwords made up of letters from alternating sides of the keyboard, for a smooth typing experience.</p>
+        </div>
+
+        <div class="levers row">
+            <div class="col-xs-3">
+                <div id="number-of-passwords" class="slider"></div>
+                <div class="info">
+                    <p>Number of passwords</p>
+                    <div>5</div>
+                </div>
+            </div>
+
+            <div class="col-xs-3">
+                <div id="password-length" class="slider"></div>
+                <div class="info">
+                    <p>Password length</p>
+                    <div>10</div>
+                </div>
+            </div>
+
+            <div class="col-xs-3">
+                <div id="cap-odds" class="slider"></div>
+                <div class="info">
+                    <p>Percentage of capital letters</p>
+                    <div class="percent">25</div>
+                </div>
+            </div>
+
+            <div class="col-xs-3">
+                <div id="symbol-odds" class="slider"></div>
+                <div class="info">
+                    <p>Percentage of symbols</p>
+                    <div class="percent">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="passwords">
+                <div class="password"></div>
+            </div>
+
+            <button class="btn btn-primary btn-lg" id="more">More</button>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="pwgen.js"></script>
+</body>
+</html>

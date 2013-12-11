@@ -1,0 +1,50 @@
+.slider {
+    float: left;
+    height: 160px;
+}
+
+.info {
+    width: 100px;
+    margin-left: 20px;
+    font-size: 12px;
+}
+.info > p {
+    height: 50px;
+}
+
+.info > div {
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+.levers {
+    margin-top: 32px;
+}
+
+.percent:after {
+    content: '%';
+}
+#passwords {
+    margin-top: 30px;
+}
+
+#passwords.label {
+    font-size: 32px;
+}
+
+#passwords.label, .slider {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.password {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#more {
+    float: right;
+}
