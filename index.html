@@ -4,7 +4,7 @@
     <title>The People's Password Generator</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet" href="pwgen.css"
+    <link rel="stylesheet" href="css/pwgen.css"
 </head>
 <body>
     <div class="container">
@@ -16,10 +16,13 @@
         <div class="levers row">
             <div class="col-xs-3">
                 <div id="number-of-passwords" class="slider"></div>
-                <div class="info">
+                <div id="my-slider" class="dragdealer">
+                    <div class="red-bar handle">drag me</div>
+                </div>
+                <!--<div class="info">
                     <p>Number of passwords</p>
                     <div>5</div>
-                </div>
+                </div>-->
             </div>
 
             <div class="col-xs-3">
@@ -56,8 +59,24 @@
         </div>
     </div>
 
+
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <script src="pwgen.js"></script>
+    <script src="js/dragdealer.js"></script>
+    <script src="js/pwgen.js"></script>
+    <script >
+    console.log('hello');
+    new Dragdealer('my-slider',
+        {
+            horizontal: false,
+            vertical: true,
+            yPrecision: content.offsetHeight,
+            animationCallback: function(x, y)
+            {
+                var margin = y * (content.offsetHeight - mask.offsetHeight);
+                content.style.marginTop = String(-margin) + 'px';
+            }
+        });
+    </script>
 </body>
 </html>
