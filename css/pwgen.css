@@ -1,13 +1,69 @@
+*, *:before, *:after {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+body {
+    background: #FFFFE6;
+    color: #137072;
+    text-align: center;
+}
 .slider {
     float: left;
     height: 160px;
 }
-
+/* https://kuler.adobe.com/1968-color-theme-3216486/edit/?copy=true&base=3&rule=Custom&selected=3&name=Copy%20of%201968&mode=rgb&rgbvalues=0.07450980392156863,0.4392156862745098,0.4470588235294118,0.33725490196078434,0.6980392156862745,0.5725490196078431,0.7176470588235294,0.9607843137254902,0.6705882352941176,0.984313725490196,1,0.7529411764705882,0.7490196078431373,0.13333333333333333,0.23921568627450981&swatchOrder=0,1,2,3,4*/
 .info {
     width: 100px;
-    margin-left: 20px;
     font-size: 12px;
 }
+.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
+.container:before,
+.container:after{display:table;content:" "}
+.container:after{clear:both}
+.container:before,
+.container:after{display:table;content:" "}
+.container:after{clear:both}
+@media(max-width:768px){
+    .container{width:750px}
+    .info {
+        width: 50px;
+        font-size: 12px;
+    }
+    .slider {
+        margin: 0 0 0 20px;
+    }
+}
+@media(min-width:992px){
+    .container{width:970px}
+}
+@media(min-width:1200px){
+    .container{width:1170px}
+}
+.row{margin-right:-15px;margin-left:-15px}
+.row:before,.row:after{display:table;content:" "}
+.row:after{clear:both}
+.row:before,.row:after{display:table;content:" "}
+.row:after{clear:both}
+.col-xs-3{
+    display:inline-block;width:305px;
+    position:relative;min-height:1px;padding-right:15px;padding-left:15px
+}
+
+
+.btn{ background: #137072;font-family: 'aaarghnormal', verdana;
+    color: #FFF;display:block;width: 100px;
+    padding:6px 12px;margin:0 auto;
+    font-weight:normal;font-size: 1em;
+    line-height:1.428571429;text-align:
+    center;white-space:nowrap;
+    cursor:pointer;background-image:none;border:1px solid transparent;border-radius:5px;
+    -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}
+.btn:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+.btn:hover,.btn:focus{color:#333;text-decoration:none}
+.btn:active,.btn.active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);box-shadow:inset 0 3px 5px rgba(0,0,0,0.125)}
+.btn.disabled,.btn[disabled],fieldset[disabled] .btn{pointer-events:none;cursor:not-allowed;opacity:.65;filter:alpha(opacity=65);-webkit-box-shadow:none;box-shadow:none}
+
 h1 {
     font-family: 'zantrokeregular', verdana;
 }
@@ -50,27 +106,43 @@ body {
     text-align: center;
     margin-bottom: 8px;
 }
-
-#more {
-    float: right;
+.slider {
+    width: 30px;
+    margin: 0 10px 0 0 ;
+    border-radius: 5px ;
 }
+
 /* Drag Dealer */
 .dragdealer {
-    position: relative;
     height: 30px;
-    background: #EEE;
 }
+.slider,
+.dragdealer {
+    position: relative;
+    background: #56B292;
+}
+
 .dragdealer .handle {
     position: absolute;
     cursor: pointer;
 }
+.ui-slider-handle {
+    width: 30px;
+    position: absolute;
+    margin-bottom: -.6em;
+}
 .dragdealer .red-bar {
     width: 100px;
+}
+.ui-slider-handle ,
+.dragdealer .red-bar {
+    display: block;
     height: 30px;
-    background: #CC0000;
+    background: #137072;
     color: #FFF;
     line-height: 30px;
     text-align: center;
+    border-radius: 5px ;
 }
 .dragdealer .disabled {
     background: #898989;
